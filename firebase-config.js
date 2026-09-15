@@ -1,16 +1,10 @@
-// عدّلي القيم التالية بالقيم اللي بتاخذيها من Firebase Console
-// (Project settings → General → Your apps → SDK setup and configuration)
-// القيم هذه "عامة" وآمن نشرها في كود الموقع - الحماية الفعلية تكون عبر
-// قواعد Firestore/Storage (راجعي firestore.rules.txt و storage.rules.txt)
-
 export const firebaseConfig = {
-  apiKey: "PASTE_YOUR_API_KEY",
-  authDomain: "PASTE_YOUR_PROJECT.firebaseapp.com",
-  projectId: "PASTE_YOUR_PROJECT_ID",
-  storageBucket: "PASTE_YOUR_PROJECT.appspot.com",
-  messagingSenderId: "PASTE_SENDER_ID",
-  appId: "PASTE_APP_ID",
+  apiKey: "AIzaSyB332f3mM0OOqo6bBZqNv4oW_Fpzn_NkVg",
+  authDomain: "hiba-986f1.firebaseapp.com",
+  projectId: "hiba-986f1",
+  storageBucket: "hiba-986f1.firebasestorage.app",
+  messagingSenderId: "67286316745",
+  appId: "1:67286316745:web:fe9a833a199a10e330bf18",
 };
 
-// لا تلمسي هذا السطر - بيحدد تلقائيًا إذا كان لازم يشتغل بالوضع السحابي
 export const FIREBASE_ENABLED = firebaseConfig.apiKey !== "PASTE_YOUR_API_KEY";
