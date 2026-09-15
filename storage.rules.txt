@@ -1,0 +1,14 @@
+// انسخي هذا المحتوى إلى Storage → Rules في لوحة Firebase، ثم اضغطي Publish
+// هذه القاعدة تحدد حجم الملف بحد أقصى 20 ميجا وتسمح فقط بأنواع ملفات شائعة
+// (PDF, Word, Excel, PowerPoint, صور) لحمايتك من إساءة الاستخدام.
+
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /archive_files/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.resource.size < 20 * 1024 * 1024
+        && request.resource.contentType.matches('application/pdf|application/msword|application/vnd\\.openxmlformats-officedocument\\..*|application/vnd\\.ms-excel|image/.*|text/plain');
+    }
+  }
+}

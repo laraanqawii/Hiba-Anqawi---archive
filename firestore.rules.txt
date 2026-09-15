@@ -1,0 +1,13 @@
+// انسخي هذا المحتوى إلى Firestore Database → Rules في لوحة Firebase، ثم اضغطي Publish
+// ملاحظة: هذه القاعدة تسمح لأي شخص يملك رابط مشروعك بقراءة/كتابة البيانات لأنه
+// لا يوجد نظام تسجيل دخول في هذا المشروع البسيط. هذا مقبول لأرشيف شخصي غير حساس،
+// لكن لا تشاركي رابط مشروع Firebase (مختلف عن رابط الموقع) مع أحد.
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /archive_items/{itemId} {
+      allow read, write: if true;
+    }
+  }
+}
